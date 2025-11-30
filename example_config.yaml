@@ -1,0 +1,19 @@
+app:
+  log:
+    path: "./app.log"
+    mute_fx: true
+    mute_gin_debug: true
+  filestore:
+    path: "./links.txt" # Path to file with link sets
+  api:
+    port: 8080
+    base_path: "/api/v1"
+    password: "4221" # Leave empty to forbid access to /system
+  queue:
+    path: "./queue.txt" # Path to persistence queue tasks
+    workers: 50 # Max concurrent queue tasks (1 task = 1 user link set)
+  worker_pool:
+    workers_ratio: 1 # Determines workers per domain (workers = domains / ratio, e.g. 1 - 1 w per domain, 2 - 1 worker per 2 domains)
+    workers_limit: 200 # Max number of concurrent checker workers (1 worker = 1 link)
+  links:
+    recheck_statuses_on_print: true # Recheck links before printing report

@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+# IDEs
+.idea/
+# Project
+config.yaml
+*.log
+links.txt
+queue.txt
