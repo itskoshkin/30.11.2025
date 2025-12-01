@@ -52,9 +52,15 @@
 <details>
 <summary><h3>Запуск проекта</h3></summary>
 
+Склонировать репозиторий
 ```bash
 git clone https://github.com/itskoshkin/30.11.2025 && cd 30.11.2025
 ```
+Подсунуть конфиг (отредактировать содержимое при необходимости)
+```bash
+mv example_config.yaml config.yaml
+```
+Собрать и запустить приложение
 ```bash
 go build -o link-availability-checker cmd/main.go && ./link-availability-checker
 ```
